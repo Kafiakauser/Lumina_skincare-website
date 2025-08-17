@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina - Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1 class="logo">Lumina</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="shop.html" class="active">Shop</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="shop">
+    <h2 style="text-align:center;">Our Products</h2>
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="blob:https://web.whatsapp.com/ad916ed4-b606-4cca-999c-bd48c84417d1" alt="Cream">
+            <h3>Radiance Face Cream</h3>
+            <p>Rs.1600</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1618354691438-25e9a0d0c356?auto=format&fit=crop&w=800&q=80" alt="Serum">
+            <h3>Vitamin C Serum</h3>
+            <p>Rs.2500</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="https://www.freepik.com/free-photo/still-life-cosmetic-products_20143648.htm#fromView=search&page=1&position=10&uuid=3bbab342-c71e-4ae7-87d7-7c4d22e7aa7b&query=Personal+Care+single+product" alt="Cleanser">
+            <h3>Gentle Cleanser</h3>
+            <p>Rs2800</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+</section>
+<section class="reviews">
+    <h2>Customer Reviews</h2>
+
+    <form id="reviewForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <select id="rating" required>
+            <option value="">Rating</option>
+            <option value="5">⭐⭐⭐⭐⭐</option>
+            <option value="4">⭐⭐⭐⭐</option>
+            <option value="3">⭐⭐⭐</option>
+            <option value="2">⭐⭐</option>
+            <option value="1">⭐</option>
+        </select>
+        <textarea id="comment" placeholder="Your Review" required></textarea>
+        <button type="submit">Submit Review</button>
+    </form>
+
+    <div id="reviewsList"></div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Lumina. All rights reserved.</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

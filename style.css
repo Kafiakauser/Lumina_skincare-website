@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #f5ebdd;
+    color: #333;
+}
+
+header {
+    background-color: #f5ebdd;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #fadcd9;
+}
+
+.logo {
+    font-family: 'Allura', cursive;
+    font-size: 2.5rem;
+    color: #B8860B;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+nav a.active {
+    border-bottom: 2px solid #fadcd9;
+}
+
+.hero {
+    text-align: center;
+    padding: 3rem;
+    background-color: #fadcd9;
+}
+
+.btn {
+    background-color: #B8860B;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 25px;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.product-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.product-card {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 220px;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+button {
+    background-color: #fadcd9;
+    border: none;
+    color: #333;
+    padding: 8px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+button:hover {
+    background-color: #f5ebdd;
+}
+
+.contact {
+    padding: 2rem;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+}
+
+input, textarea {
+    margin: 8px 0;
+    padding: 10px;
+    border: 1px solid #fadcd9;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f5ebdd;
+    border-top: 2px solid #fadcd9;
+}
+.reviews {
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.reviews {
+    padding: 2rem;
+    background-color: #f5ebdd; /* same as body background */
+    border-radius: 10px;
+    margin: 2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+#reviewForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 2rem;
+}
+
+#reviewForm input, 
+#reviewForm select, 
+#reviewForm textarea {
+    padding: 10px;
+    border: 1px solid #fadcd9;
+    border-radius: 5px;
+}
+
+#reviewsList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.review {
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: hsl(0, 11%, 96%);
+}
+
+.review strong {
+    color: #B8860B;
+}
