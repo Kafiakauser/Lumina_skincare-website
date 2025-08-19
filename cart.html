@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina - Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .cart-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1rem;
+        }
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #fadcd9;
+            text-align: left;
+        }
+        .remove-btn {
+            background: #ff6b6b;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .remove-btn:hover {
+            background: #ff4b4b;
+        }
+        .total {
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1 class="logo">Lumina</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="cart.html" class="active">🛒Cart</a>
+    </nav>
+</header>
+
+<section class="cart-container">
+    <h2>Your Cart</h2>
+    <table id="cartTable">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Price (Rs.)</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <div class="total" id="totalPrice">Total: Rs.0</div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Lumina. All rights reserved.</p>
+</footer>
+
+<script>
+    // Load cart from localStorage
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const cartTableBody = document.querySelector("#cartTable tbody");
+    const totalPriceEl = document.getElementById("totalPrice");
+
+    function renderCart() {
+        cartTableBody.innerHTML = "";
+        let total = 0;
+
+        cart.forEach((item, index) => {
+            let row = document.createElement("tr");
+            row.innerHTML = `
+                <td>${item.name}</td>
+                <td>${item.price}</td>
+                <td><button class="remove-btn" onclick="removeItem(${index})">Remove</button></td>
+            `;
+            cartTableBody.appendChild(row);
+            total += parseFloat(item.price);
+        });
+
+        totalPriceEl.textContent = `Total: Rs.${total}`;
+    }
+
+    function removeItem(index) {
+        cart.splice(index, 1);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        renderCart();
+    }
+
+    renderCart();
+</script>
+</body>
+</html>
