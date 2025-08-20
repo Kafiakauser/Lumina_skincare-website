@@ -12,18 +12,26 @@
     <nav>
         <a href="index.html" class="active">Home</a>
         <a href="shop.html">Shop</a>
-        <a href="contact.html">Contact</a>
+         <a href="cart.html">🛒 Cart (<span id="cartCount">0</span>)</a>
     </nav>
 </header>
 
-<section class="hero" style="background-image: url('blob:https://web.whatsapp.com/a11e8714-6661-4e05-a66e-761f0aec65b9'); background-size: cover; background-position: center; color: white; padding: 4rem;">
+<section class="hero" style="background-image: url('https://img.freepik.com/free-photo/flat-lay-natural-self-care-products-composition_23-2148990019.jpg'); background-size: cover; background-position: center; color: white; padding: 4rem;">
     <h2 style="font-size:2.5rem;">Glow Naturally with Lumina</h2>
     <p>Luxury skincare crafted with love and purity.</p>
     <a href="shop.html" class="btn">Shop Now</a>
 </section>
-
+<h1><marquee>✨ NEW SALE 28% OFF! Shop now before time runs out! ✨</marquee></h1>
 <footer>
     <p>&copy; 2025 Lumina. All rights reserved.</p>
 </footer>
+<script>
+    function updateCartCount() {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        document.getElementById("cartCount").textContent = cart.length;
+    }
+    updateCartCount();
+</script>
+
 </body>
 </html>

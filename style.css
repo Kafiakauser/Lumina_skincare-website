@@ -91,11 +91,6 @@ button:hover {
     background-color: #f5ebdd;
 }
 
-.contact {
-    padding: 2rem;
-    text-align: center;
-}
-
 form {
     display: flex;
     flex-direction: column;
@@ -162,4 +157,12 @@ footer {
 
 .review strong {
     color: #B8860B;
+}
+#cartLink {
+    color: #000; /* black font */
+    font-weight: 600;
+    text-decoration: none;
+}
+#cartLink:hover {
+    text-decoration: underline;
 }
